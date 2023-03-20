@@ -7,14 +7,14 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # %%
-def register_bonus(year, base, bounus_months):
+def register_bonus(year, base, bonus_months):
     path = "./income/{}年".format(year)
     os.makedirs(path, exist_ok=True)
 
     path = "./income/{}年/bonus.json".format(year)
     _json = {
         "base": base,
-        "bonus_months": bounus_months
+        "bonus_months": bonus_months
         }
     with open(path, "w") as f:
         json.dump(_json, f, indent=2)
